@@ -2,8 +2,17 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import re
 import operator
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-update = Updater(token="934489808:AAESiLuKRSnf6d5nbAVcQhP5937fT1UAiSM")
+
+
+
+
+load_dotenv(verbose=True)
+
+update = Updater(token=os.getenv("TOKEN"))
 dispatcher = update.dispatcher
 
 def start(bot, update):
